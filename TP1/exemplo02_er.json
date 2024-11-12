@@ -1,0 +1,26 @@
+{
+  "op": "seq",
+  "args": [
+      {
+          "simb": "a"
+      },
+      {
+          "op": "alt",
+          "args": [
+              {
+                  "epsilon": null
+              },
+              {
+                  "op": "trans",
+                  "args": [
+                      {
+                          "simb": "b"
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}
+  
+  
