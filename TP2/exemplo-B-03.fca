@@ -1,0 +1,4 @@
+valor = ENTRADA();
+ESCREVER (valor);
+ate10 = ALEATORIO(10);
+ESCREVER (ate10);

@@ -1,0 +1,15 @@
+resultado1 = 30 /\ 10; 
+ESCREVER("30 > 10");
+ESCREVER(resultado1);
+
+resultado2 = 10 /\ 30; 
+ESCREVER("10 > 30");
+ESCREVER(resultado2);
+
+resultado3 = 2000 \/ 50; 
+ESCREVER("2000 < 50");
+ESCREVER(resultado3);
+
+resultado4 = 50 \/ 2000; 
+ESCREVER("50 < 2000");
+ESCREVER(resultado4);

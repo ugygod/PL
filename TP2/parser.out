@@ -1,0 +1,87 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    COMMENT
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> statement_list
+Rule 2     statement_list -> statement_list statement
+Rule 3     statement_list -> statement
+Rule 4     statement -> assignment SEMICOLON
+Rule 5     statement -> write_statement SEMICOLON
+Rule 6     statement -> read_statement SEMICOLON
+Rule 7     statement -> random_statement SEMICOLON
+Rule 8     statement -> function_definition
+Rule 9     statement -> function_call SEMICOLON
+Rule 10    assignment -> IDENTIFIER ASSIGN expression
+Rule 11    write_statement -> WRITE LPAREN expression RPAREN
+Rule 12    read_statement -> IDENTIFIER ASSIGN READ LPAREN RPAREN
+Rule 13    random_statement -> IDENTIFIER ASSIGN RANDOM LPAREN NUMBER RPAREN
+Rule 14    function_definition -> FUNCTION IDENTIFIER LPAREN parameters RPAREN COMMA COLON expression SEMICOLON
+Rule 15    function_definition -> FUNCTION IDENTIFIER LPAREN parameters RPAREN COLON statement_list END
+Rule 16    function_call -> IDENTIFIER LPAREN arguments RPAREN
+Rule 17    expression -> expression PLUS expression
+Rule 18    expression -> expression MINUS expression
+Rule 19    expression -> expression TIMES expression
+Rule 20    expression -> expression DIVIDE expression
+Rule 21    expression -> expression CONCAT expression
+Rule 22    expression -> expression MAIOR expression
+Rule 23    expression -> expression MENOR expression
+Rule 24    expression -> LPAREN expression RPAREN
+Rule 25    expression -> NUMBER
+Rule 26    expression -> IDENTIFIER
+Rule 27    expression -> STRING
+Rule 28    expression -> LBRACKET elements RBRACKET
+Rule 29    elements -> elements COMMA expression
+Rule 30    elements -> expression
+Rule 31    elements -> empty
+Rule 32    empty -> <empty>
+
+Terminals, with rules where they appear
+
+ASSIGN               : 10 12 13
+COLON                : 14 15
+COMMA                : 14 29
+COMMENT              : 
+CONCAT               : 21
+DIVIDE               : 20
+END                  : 15
+FUNCTION             : 14 15
+IDENTIFIER           : 10 12 13 14 15 16 26
+LBRACKET             : 28
+LPAREN               : 11 12 13 14 15 16 24
+MAIOR                : 22
+MENOR                : 23
+MINUS                : 18
+NUMBER               : 13 25
+PLUS                 : 17
+RANDOM               : 13
+RBRACKET             : 28
+READ                 : 12
+RPAREN               : 11 12 13 14 15 16 24
+SEMICOLON            : 4 5 6 7 9 14
+STRING               : 27
+TIMES                : 19
+WRITE                : 11
+error                : 
+
+Nonterminals, with rules where they appear
+
+arguments            : 16
+assignment           : 4
+elements             : 28 29
+empty                : 31
+expression           : 10 11 14 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 29 30
+function_call        : 9
+function_definition  : 8
+parameters           : 14 15
+program              : 0
+random_statement     : 7
+read_statement       : 6
+statement            : 2 3
+statement_list       : 1 2 15
+write_statement      : 5
+
